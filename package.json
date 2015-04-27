@@ -1,0 +1,24 @@
+{
+    "name": "jedi-postprocessor-cmdwrap",
+    "version": "1.0.0",
+    "description": "a postprocessor plugin for fis to auto wrap cmd module",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/defcc/jedi-postprocessor-cmdwrap"
+    },
+    "keywords": [
+        "fis",
+        "cmd",
+        "seajs",
+        "spm"
+    ],
+    "author": "zbjfe",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/defcc/jedi-postprocessor-cmdwrap"
+    }
+}
