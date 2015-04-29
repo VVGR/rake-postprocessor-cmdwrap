@@ -13,7 +13,6 @@ function outputDep( dep ){
         return '[]';
     }
     dep.forEach(function( item, idx ){
-        console.log( item.substring( item.length - 5 ) );
         var rExt = item.substring( item.length -5 );
         if ( rExt == '.less' || rExt == '.tmpl' ) {
             dep[ idx ] = item + '#';
@@ -22,4 +21,8 @@ function outputDep( dep ){
 
 
     return '[\'' + dep.join('\',\'') + '\']';
+}
+
+function getConfig(key, local, global) {
+    return local && typeof local[key] !== 'undefined' ? local[key] : global[key];
 }
