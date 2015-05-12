@@ -22,7 +22,3 @@ function outputDep( dep ){
 
     return '[\'' + dep.join('\',\'') + '\']';
 }
-
-function getConfig(key, local, global) {
-    return local && typeof local[key] !== 'undefined' ? local[key] : global[key];
-}
