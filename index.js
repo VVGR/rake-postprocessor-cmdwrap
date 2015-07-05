@@ -13,12 +13,7 @@ function outputDep( dep ){
         return '[]';
     }
     dep.forEach(function( item, idx ){
-        var rExt = item.substring( item.length -5 );
-        if ( rExt == '.less' || rExt == '.tmpl' ) {
-            dep[ idx ] = item + '#';
-        }
+        dep[ idx ] = item;
     });
-
-
     return '[\'' + dep.join('\',\'') + '\']';
 }
