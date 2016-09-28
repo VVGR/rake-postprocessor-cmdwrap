@@ -1,9 +1,7 @@
 'use strict';
 module.exports = function(content, file, conf){
     if ( file.isMod ) {
-        if(!/^\s*define\s*\(/.test(content)){
-            content = 'define(\'' + file.getId() + '\', '+ outputDep( file.requires ) +',function(require, exports, module){ ' + content + ' \r\n});';
-        }
+        content = content.replace(/^(\s*define\(.*?,)(.*)(function\([\w\W]+)$/img, "$1 " + outputDep( file.requires ) + ", $3" )
     }
     return content;
 };
